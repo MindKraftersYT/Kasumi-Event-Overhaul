@@ -78,7 +78,7 @@
 [s][bup 0 8 3 65535 0][f 4 10 65535 0 0][vp 8 0 0 19 65535 0]S-Sorry... I thought I conquered my fears[n]back at the beach...[n][f 1 3 65535][w][e]
 
 [msg MSG_020_0_0 [Kasumi]]
-[s][vp 8 0 0 20 65535 0]Do you mind telling me what happened, Futaba?[n][f 1 3 65535] [e]
+[s][vp 8 0 0 20 65535 0]Do you mind telling me what happened, Futaba?[n][f 1 3 65535][w][e]
 
 [msg MSG_021_0_0 [Futaba]]
 [s][bup 0 8 5 65535 0][f 4 10 65535 0 0][vp 8 0 0 21 65535 0]There wasn't anyone I knew with me,[n]so I panicked. Felt like my heart was[n]gonna pop...[n][f 1 3 65535][w][e]
