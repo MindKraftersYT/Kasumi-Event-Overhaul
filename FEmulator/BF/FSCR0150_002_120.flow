@@ -1,0 +1,190 @@
+
+// 
+// FlowScript decompiled using Atlus Script Tools
+// 
+
+
+// 
+// Imports
+// 
+
+import("FSCR0150_002_120.BF.msg");
+
+// Procedure Index: 1
+void D00_e100_201_hook()
+{
+    float fVar0;
+    float fVar1;
+    float fVar2;
+    float fVar3;
+    float fVar4;
+    float fVar5;
+    float fVar6;
+    float fVar7;
+    int var0;
+    int var2;
+    int var4;
+    int var6;
+    int var3;
+    int var8;
+    int var1;
+    int var11;
+    var0 = FLD_PC_GET_RESHND(0);
+    
+    if (var0 >= 0)
+    {
+        FLD_MODEL_SET_TRANSLATE(var0, 509.4249f, 993.7495f, 293.9773f, 0);
+        FLD_MODEL_SET_ROTATE(var0, 0, -150, 0, 0);
+        MDL_ANIM(var0, 0, 1, 0, 1.00f);
+    }
+
+    FLD_EFFECT_BANK_LOAD(1, 11);
+    FLD_EFFECT_BANK_SYNC(1);
+    var2 = FLD_NPC_MODEL_LOAD_BASE(5501, 0, 0, 200);
+    var4 = FLD_NPC_MODEL_LOAD_BASE(5501, 0, 0, 200);
+    var6 = FLD_NPC_MODEL_LOAD_BASE(5501, 0, 0, 200);
+    FLD_MODEL_LOADSYNC(var2);
+    FLD_MODEL_LOADSYNC(var4);
+    FLD_MODEL_LOADSYNC(var6);
+    var3 = FLD_MODEL_CLONE_ADDMOTION(var2, 200);
+    FLD_MODEL_SET_TRANSLATE(var3, 209.3472f, 993.7494f, -6.5586f, 0);
+    FLD_MODEL_SET_ROTATE(var3, 0, 45, 0, 0);
+    MDL_ANIM(var3, 0, 1, 0, 1.00f);
+    FLD_MODEL_SYNC_TRANSLATE(var3);
+    FLD_MODEL_SET_VISIBLE(var3, 0, 0);
+    FLD_MODEL_SYNC_VISIBLE(var3);
+    FLD_MODEL_SET_TRANSLATE(var4, -109.3472f, 993.7495f, -106.5586f, 0);
+    FLD_MODEL_SET_ROTATE(var4, 0, 45, 0, 0);
+    MDL_ANIM(var4, 0, 1, 0, 1.00f);
+    FLD_MODEL_SYNC_TRANSLATE(var4);
+    FLD_MODEL_SET_VISIBLE(var4, 0, 0);
+    FLD_MODEL_SYNC_VISIBLE(var4);
+    FLD_MODEL_SET_TRANSLATE(var6, 259.3472f, 993.7495f, -206.5586f, 0);
+    FLD_MODEL_SET_ROTATE(var6, 0, 30, 0, 0);
+    MDL_ANIM(var6, 0, 1, 0, 1.00f);
+    FLD_MODEL_SYNC_TRANSLATE(var6);
+    FLD_MODEL_SET_VISIBLE(var6, 0, 0);
+    FLD_MODEL_SYNC_VISIBLE(var6);
+    FLD_SMP_EVENT_BEGIN(0);
+    FLD_CAMERA_LOCK();
+    FLD_CAMERA_LOCK_INTERP(550.7499f, 1087.045f, 535.9177f, 0.0137f, 0.1073f, 0.0247f, 0.9938f, 0);
+    FLD_CAMERA_SYNC_INTERP();
+    EVT_FAST_PROC_START();
+    FADEIN(0, 10);
+    FADE_SYNC();
+    FLD_WAIT(15);
+    // bit id (536870912) + (2591) = 8735
+    // bit id (536870912) + (2590) = 8734
+    
+
+    MSG_WND_DSP();
+    MSG(D06_01_e100_201_mes01, 0);
+    MSG_WND_CLS();
+    MSG_WND_DSP();
+    MSG(D06_01_e100_201_mes02, 0);
+    MSG_WND_CLS();
+    
+
+    MDL_ICON(var0, 1);
+    FLD_CAMERA_LOCK_INTERP(550.7498f, 1087.045f, 535.9178f, 0.0155f, 0.1812f, 0.0236f, 0.983f, 15);
+    var8 = FLD_EFFECT_BANK_START(1);
+    FLD_EFFECT_SET_POS(var8, 200.00f, 994.00f, 0.00f);
+    FLD_MODEL_SET_VISIBLE(var3, 1, 5);
+    MDL_ANIM(var3, 4, 0, 0, 1.00f);
+    FLD_COMSE_PLAY(219);
+    FLD_WAIT(5);
+    FLD_MODEL_SET_VISIBLE(var4, 1, 5);
+    MDL_ANIM(var4, 5, 0, 0, 1.00f);
+    FLD_WAIT(5);
+    FLD_MODEL_SET_VISIBLE(var6, 1, 5);
+    MDL_ANIM(var6, 6, 0, 0, 1.00f);
+    FLD_MODEL_SYNC_VISIBLE(var3);
+    FLD_MODEL_SYNC_VISIBLE(var4);
+    FLD_MODEL_SYNC_VISIBLE(var6);
+    FLD_CAMERA_SYNC_INTERP();
+    FLD_WAIT(15);
+    var1 = FLD_MODEL_CLONE_ADDMOTION(var0, 251);
+    var11 = FLD_CAMERA_READ(100, 201, 0);
+    FLD_CAMERA_READ_SYNC(var11);
+    FLD_CAMERA_SET(var11);
+    FLD_CAMERA_ANIM(var11, 0, 0, 0, 1.00f);
+    FLD_COMSE_PLAY(4043);
+    FLD_MODEL_SET_TRANSLATE(var3, 0, 0, 0, 0);
+    FLD_MODEL_SET_ROTATE(var3, 0, 0, 0, 0);
+    MDL_ANIM(var3, 60, 0, 0, 1.00f);
+    
+    if (var1 >= 0)
+    {
+        FLD_MODEL_SET_TRANSLATE(var1, 0, 0, 0, 0);
+        FLD_MODEL_SET_ROTATE(var1, 0, 0, 0, 0);
+        MDL_ANIM(var1, (60 + 0), 0, 0, 1.00f);
+    }
+
+    MDL_ANIM_SYNC(var1);
+    CAMERA_ANIM_SYNC(var11);
+    fVar0 = FLD_CAMERA_GET_X_POS();
+    fVar1 = FLD_CAMERA_GET_Y_POS();
+    fVar2 = FLD_CAMERA_GET_Z_POS();
+    fVar3 = FLD_CAMERA_GET_X_ROT();
+    fVar4 = FLD_CAMERA_GET_Y_ROT();
+    fVar5 = FLD_CAMERA_GET_Z_ROT();
+    fVar6 = FLD_CAMERA_GET_W_ROT();
+    fVar7 = FLD_CAMERA_GET_FOVY();
+    MDL_ANIM(var1, 0, 1, 0, 1.00f);
+    FLD_MODEL_REVERT_ADDMOTION(var0, var1);
+    MDL_ANIM(var3, 0, 1, 0, 1.00f);
+    FLD_MODEL_REVERT_ADDMOTION(var2, var3);
+    FLD_CAMERA_RESET();
+    FLD_CAMERA_FREE(var11);
+    FLD_CAMERA_LOCK_INTERP(fVar0, fVar1, fVar2, fVar3, fVar4, fVar5, fVar6, 0);
+    FLD_CAMERA_FOVY_INTERP(fVar7, 0);
+    FLD_MODEL_FREE(var4);
+    FLD_MODEL_FREE(var6);
+    FLD_MODEL_SET_TRANSLATE(var2, 509.4249f, 993.7495f, 293.9773f, 0);
+    FLD_MODEL_SET_ROTATE(var2, 0, 45, 0, 0);
+    MDL_ANIM(var2, 3, 1, 0, 0.80f);
+    FLD_CAMERA_FOVY_INTERP(45, 0);
+    FLD_CAMERA_LOCK_INTERP(427.977f, 1197.555f, 425.8774f, 0.0605f, -0.8444f, 0.1285f, 0.5166f, 15);
+    MDL_ANIM(var0, 28, 1, 0, 1.00f);
+    FLD_MODEL_SET_TRANSLATE(var0, 880.00f, 1500.00f, 680.00f, 0);
+    FLD_MODEL_SET_ROTATE(var0, 0, -150, 0, 0);
+    FLD_MODEL_SYNC_TRANSLATE(var0);
+    FLD_MODEL_SET_TRANSLATE(var0, 880.00f, 1300.00f, 680.00f, 15);
+    FLD_WAIT(15);
+    MDL_ANIM(var0, 29, 0, 0, 1.00f);
+    FLD_WAIT(20);
+    MDL_ANIM(var0, 27, 1, 0, 1.00f);
+    FLD_MODEL_SET_TRANSLATE(var0, 880.00f, 1600.00f, 680.00f, 10);
+    FLD_WAIT(15);
+    FLD_CAMERA_SYNC_INTERP();
+    FLD_CAMERA_LOCK_INTERP(459.4004f, 1980.614f, 848.3682f, -0.1923f, -0.7069f, -0.2111f, 0.6471f, 0);
+    MDL_ANIM(var0, 28, 1, 0, 1.00f);
+    FLD_MODEL_SET_TRANSLATE(var0, 1067.43f, 1898.147f, 1003.284f, 0);
+    FLD_MODEL_SET_ROTATE(var0, 0, -150, 0, 0);
+    FLD_MODEL_SYNC_TRANSLATE(var0);
+    FLD_MODEL_SET_TRANSLATE(var0, 1067.43f, 1598.147f, 1003.284f, 8);
+    MDL_ANIM(var0, 29, 0, 0, 0.80f);
+    MDL_ANIM_NEXT(var0, 0, 1, 10, 1.00f);
+    FLD_WAIT(15);
+    FLD_WAIT(15);
+    // bit id (536870912) + (2591) = 8735
+    // bit id (536870912) + (2590) = 8734
+    
+
+    MSG_WND_DSP();
+    MSG(D06_01_e100_201_mes03, 0);
+    MSG_WND_CLS();
+
+    FLD_EFFECT_START(0);
+    FLD_CAMERA_LOCK_INTERP(537.0256f, 1937.528f, 842.6202f, 0.0847f, 0.8534f, 0.1481f, -0.4926f, 0);
+    FLD_CAMERA_SYNC_INTERP();
+    FLD_EFFECT_BANK_FREE(1);
+    FLD_EFFECT_BANK_FREE(2);
+    FLD_EFFECT_BANK_FREE(3);
+    FLD_CAMERA_INTERP(15);
+    EVT_FAST_PROC_END();
+    FLD_SMP_EVENT_END(0);
+    FLD_CAMERA_SYNC_INTERP();
+    FLD_CAMERA_UNLOCK();
+}
+

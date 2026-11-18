@@ -1,0 +1,131 @@
+
+// 
+// FlowScript decompiled using Atlus Script Tools
+// 
+
+
+// 
+// Imports
+// 
+
+import("036E.BF.msg");
+
+// 
+// Procedure declarations
+// 
+
+// Procedure Index: 0
+void BTL_036E_ENCOUNT()
+{
+    return;
+}
+
+
+// Procedure Index: 1
+void BTL_036E_BTLSTART()
+{
+    int var5;
+    // bit id (805306368) + (14) = 11278
+    BIT_ON((805306368 + 14));
+    FADEIN(0, 15);
+    BTL_LETTERBOX_IN(1);
+    var5 = BTL_CUTSCENE_LOAD(823, 10);
+    BTL_CUTSCENE_LOADSYNC(var5);
+    BTL_CUTSCENE_PLAY(var5, 1, 1, 2, 613);
+    MSG_WND_DSP();
+    MSG(MSG_BTLSTART_002, 0);
+    MSG_WND_CLS();
+    BTL_CUTSCENE_END(var5);
+    var5 = BTL_CUTSCENE_LOAD(823, 11);
+    BTL_CUTSCENE_LOADSYNC(var5);
+    BTL_CUTSCENE_PLAY(var5, 1, 10, 2, 613);
+    MSG_WND_DSP();
+    MSG(MSG_BTLSTART_003, 0);
+    MSG_WND_CLS();
+    MSG_WND_DSP();
+    MSG(MSG_ACT_START_001, 0);
+    MSG_WND_CLS();
+    MSG_WND_DSP();
+    MSG(MSG_ACT_START_002, 0);
+    MSG_WND_CLS();
+    MSG_WND_DSP();
+    MSG(MSG_KASUMI_001, 0);
+    MSG_WND_CLS();
+    BTL_CUTSCENE_END(var5);
+    BTL_LETTERBOX_OUT(1);
+    return;
+}
+
+
+// Procedure Index: 2
+void BTL_036E_AISTART()
+{
+    return;
+}
+
+
+// Procedure Index: 3
+void BTL_036E_ACTSTART()
+{
+    return;
+}
+
+
+// Procedure Index: 4
+void BTL_036E_ACTEND()
+{
+    return;
+}
+
+
+// Procedure Index: 5
+void BTL_036E_BTLEND()
+{
+    return;
+}
+
+
+// Procedure Index: 6
+void BTL_036E_TALK()
+{
+    AI_SET_TALKRESULT(5);
+    return;
+}
+
+
+// Procedure Index: 7
+void BTL_036E_TALK02()
+{
+    return;
+}
+
+
+// Procedure Index: 8
+void BTL_036E_EVENT()
+{
+    int var6;
+    // bit id (805306368) + (14) = 11278
+    BIT_ON((805306368 + 14));
+    FADEIN(0, 15);
+    BTL_LETTERBOX_IN(1);
+    var6 = BTL_CUTSCENE_LOAD(823, 100);
+    BTL_CUTSCENE_LOADSYNC(var6);
+    BTL_CUTSCENE_PLAY(var6, 1, 10, 2, 613);
+    MSG_WND_DSP();
+    MSG(MSG_ACT_START_001, 0);
+    MSG_WND_CLS();
+    BTL_CUTSCENE_END(var6);
+    var6 = BTL_CUTSCENE_LOAD(823, 101);
+    BTL_CUTSCENE_LOADSYNC(var6);
+    BTL_CUTSCENE_PLAY(var6, 1, 10, 2, 613);
+    MSG_WND_DSP();
+    MSG(MSG_ACT_START_002, 0);
+    MSG_WND_CLS();
+    MSG_WND_DSP();
+    MSG(MSG_KASUMI_001, 0);
+    MSG_WND_CLS();
+    BTL_CUTSCENE_END(var6);
+    BTL_LETTERBOX_OUT(1);
+    return;
+}
+
