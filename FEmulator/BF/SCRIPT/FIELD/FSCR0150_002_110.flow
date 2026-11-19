@@ -1,0 +1,80 @@
+
+import("FSCR0150_002_110.msg");
+
+// Procedure Index: 1
+void D00_e100_102_hook()
+{
+    int var0;
+    int var4;
+    int var5;
+    int var6;
+    var0 = FLD_PC_GET_RESHND(0);
+    var4 = FLD_EFFECT_BANK_START(1);
+    
+    if (var0 >= 0)
+    {
+        FLD_MODEL_SET_TRANSLATE(var0, -100.00f, 900.00f, 4680.00f, 0);
+        FLD_MODEL_SET_ROTATE(var0, 0, 80, 0, 0);
+        MDL_ANIM(var0, 0, 1, 0, 1.00f);
+    }
+
+    EVT_FAST_PROC_START();
+    FLD_CAMERA_LOCK();
+    FLD_CAMERA_LOCK_INTERP(-54.0332f, 1116.577f, 4836.458f, 0.0079f, -0.7334f, 0.0079f, 0.6797f, 0);
+    FLD_CAMERA_FOVY_INTERP(60.00f, 0);
+    var5 = FLD_NPC_TBLID_LOAD(8602);
+    var6 = FLD_NPC_TBLID_LOAD(8602);
+    FLD_MODEL_LOADSYNC(var5);
+    FLD_MODEL_SET_VISIBLE(var5, 0, 0);
+    FLD_MODEL_SET_TRANSLATE(var5, 2220.00f, 1100.00f, 4900.00f, 0);
+    FLD_MODEL_SET_ROTATE(var5, 0, -90.00f, 0, 0);
+    MDL_ANIM(var5, 2, 1, 0, 1.00f);
+    MDL_SET_SCALE(var5, 1.20f);
+    FLD_MODEL_LOADSYNC(var6);
+    FLD_MODEL_SET_VISIBLE(var6, 0, 0);
+    FLD_MODEL_SET_TRANSLATE(var6, 2125.00f, 1100.00f, 5050.00f, 0);
+    FLD_MODEL_SET_ROTATE(var6, 0, -110.00f, 0, 0);
+    MDL_ANIM(var6, 2, 1, 0, 1.00f);
+    MDL_SET_SCALE(var6, 1.20f);
+    MSG_WND_DSP();
+    MSG(D00_01_e100_102_mes01, 0);
+    MSG_WND_CLS();
+    FLD_MODEL_SET_TRANSLATE(var6, 1675.00f, 1100.00f, 4750.00f, 20);
+    FLD_MODEL_SET_VISIBLE(var6, 1, 10);
+    FLD_WAIT(15);
+    FLD_MODEL_SET_ROTATE(var6, 0, -80.00f, 0, 5);
+    FLD_WAIT(5);
+    MDL_ANIM(var6, 8, 0, 5, 1.00f);
+    FLD_MODEL_SET_TRANSLATE(var5, 1800.00f, 1100.00f, 4900.00f, 15);
+    FLD_MODEL_SET_VISIBLE(var5, 1, 10);
+    FLD_WAIT(10);
+    FLD_MODEL_SET_ROTATE(var5, 0, -90.00f, 0, 5);
+    FLD_WAIT(5);
+    MDL_ANIM(var5, 9, 0, 5, 1.00f);
+    FLD_WAIT(30);
+    FLD_CAMERA_SYNC_INTERP();
+    FLD_CAMERA_LOCK_INTERP(-438.4964f, 1069.949f, 4805.133f, -0.0277f, -0.6572f, -0.0248f, 0.7528f, 15);
+    FLD_WAIT(15);
+    FLD_CAMERA_SYNC_INTERP();
+    FLD_CAMERA_LOCK_INTERP(-345.2067f, 1150.005f, 5113.80f, -0.173f, -0.0858f, -0.0151f, 0.9811f, 15);
+    FLD_WAIT(5);
+    FLD_MODEL_SET_ROTATE(var0, 0, 160, 0, 10);
+    MDL_ANIM(var0, 1, 1, 3, 1.00f);
+    FLD_WAIT(10);
+    MDL_ANIM(var0, 0, 1, 3, 1.00f);
+    // bit id (536870912) + (2591) = 8735
+    // bit id (536870912) + (2590) = 8734
+    
+    MSG_WND_DSP();
+    MSG(D06_01_e100_102_mes02, 0);
+    MSG_WND_CLS();
+
+    EVT_FAST_PROC_END();
+    FLD_SMP_EVENT_END(0);
+    FLD_MODEL_FREE(var5);
+    FLD_MODEL_FREE(var6);
+    FLD_EFFECT_BANK_FREE(1);
+    FLD_CAMERA_SYNC_INTERP();
+    FLD_CAMERA_UNLOCK();
+}
+

@@ -17,7 +17,6 @@
   "ReleaseMetadataFileName": "p5rpc.events.rebloomed.ReleaseMetadata.json",
   "IgnoreRegexes": [
     ".*\\.json",
-    "p5rpc\\.audio\\.kasumiva\\.nuspec"
   ],
   "IncludeRegexes": [
     "\\.deps\\.json",

@@ -1,0 +1,165 @@
+
+import("SUPPORT.msg");
+
+// Procedure Index: 29
+void select_msg_150_hook()
+{
+    int var53;
+    int var55;
+    int var54;
+    var53 = GET_COUNT(130);
+    var55 = 0;
+    _284:
+    
+    if (var55 < 10)
+    {
+        var55 = (var55 + 1);
+        
+        if ((var53 == 0) || (var53 >= 1000))
+        {
+            goto _285;
+        }
+        else if (var53 == 1)
+        {
+            SET_COUNT(130,4);
+            var53 = GET_COUNT(130);
+            
+            goto _284;
+
+            sVar0 = 1;
+            sVar1 = 0;
+            sVar2 = 3;
+            sVar3 = 3;
+            sVar4 = 4;
+            FLD_REPORT_MSG_DTL(3, 6, 85, 1);
+            FLD_REPORT_MSGSYNC_DTL(3, 6, 85, 1);
+            FLD_REPORT_MSG_DTL(3, 6, 86, 1);
+            FLD_REPORT_MSGSYNC_DTL(3, 6, 86, 1);
+            FLD_REPORT_MSG_DTL(4, 6, 87, 1);
+            FLD_REPORT_MSGSYNC_DTL(4, 6, 87, 1);
+            var54 = 2;
+            SET_COUNT(130, var54);
+        }
+        else if (var53 == 2)
+        {
+            sVar0 = 1;
+            sVar1 = 0;
+            sVar2 = 5;
+            sVar3 = 2;
+            sVar4 = -1;
+            FLD_REPORT_MSG_DTL(5, 6, 88, 1);
+            FLD_REPORT_MSGSYNC_DTL(5, 6, 88, 1);
+            FLD_REPORT_MSG_DTL(2, 6, 89, 0);
+            FLD_REPORT_MSGSYNC_DTL(2, 6, 89, 0);
+            var54 = 0;
+            SET_COUNT(130, var54);
+        }
+        else if (var53 == 3)
+        {
+            SET_COUNT(130, 6);
+            var53 = GET_COUNT(130);
+            goto _284;
+
+            sVar0 = 1;
+            sVar1 = 0;
+            sVar2 = 3;
+            sVar3 = 7;
+            sVar4 = 8;
+            FLD_REPORT_MSG_DTL(3, 6, 90, 1);
+            FLD_REPORT_MSGSYNC_DTL(3, 6, 90, 1);
+            FLD_REPORT_MSG_DTL(7, 6, 91, 1);
+            FLD_REPORT_MSGSYNC_DTL(7, 6, 91, 1);
+            FLD_REPORT_MSG_DTL(8, 6, 92, 0);
+            FLD_REPORT_MSGSYNC_DTL(8, 6, 92, 0);
+            var54 = 0;
+            SET_COUNT(130, var54);
+        }
+        else if (var53 == 4)
+        {
+            sVar0 = 1;
+            sVar1 = 0;
+            sVar2 = 3;
+            sVar3 = 3;
+            sVar4 = 4;
+            FLD_REPORT_MSG_DTL(3, 1, 93, 1);
+            FLD_REPORT_MSGSYNC_DTL(3, 1, 93, 1);
+            FLD_REPORT_MSG_DTL(3, 1, 94, 1);
+            FLD_REPORT_MSGSYNC_DTL(3, 1, 94, 1);
+            FLD_REPORT_MSG_DTL(4, 1, 95, 1);
+            FLD_REPORT_MSGSYNC_DTL(4, 1, 95, 1);
+            var54 = 5;
+            SET_COUNT(130, var54);
+        }
+        else if (var53 == 5)
+        {
+            sVar0 = 1;
+            sVar1 = 0;
+            sVar2 = 5;
+            sVar3 = 2;
+            sVar4 = -1;
+            FLD_REPORT_MSG_DTL(5, 1, 96, 1);
+            FLD_REPORT_MSGSYNC_DTL(5, 1, 96, 1);
+            FLD_REPORT_MSG_DTL(2, 1, 97, 0);
+            FLD_REPORT_MSGSYNC_DTL(2, 1, 97, 0);
+            var54 = 0;
+            SET_COUNT(130, var54);
+        }
+        else if (var53 == 6)
+        {
+            sVar0 = 1;
+            sVar1 = 0;
+            sVar2 = 3;
+            sVar3 = 7;
+            sVar4 = 8;
+            FLD_REPORT_MSG_DTL(3, 1, 98, 1);
+            FLD_REPORT_MSGSYNC_DTL(3, 1, 98, 1);
+            FLD_REPORT_MSG_DTL(7, 1, 99, 1);
+            FLD_REPORT_MSGSYNC_DTL(7, 1, 99, 1);
+            FLD_REPORT_MSG_DTL(8, 1, 100, 0);
+            FLD_REPORT_MSGSYNC_DTL(8, 1, 100, 0);
+            FLD_REPORT_MSG_DTL(10, 1, D_PROLOGUE_mes_Sumire_A, 1);
+            FLD_REPORT_MSGSYNC_DTL(10, 1, D_PROLOGUE_mes_Sumire_A, 1);
+            var54 = 0;
+            SET_COUNT(130, var54);
+        }
+        else if (var53 == 7)
+        {
+            SET_COUNT(130, 8);
+            var53 = GET_COUNT(130);
+            goto _284;
+
+            sVar0 = 1;
+            sVar1 = 0;
+            sVar2 = 2;
+            sVar3 = -1;
+            sVar4 = -1;
+            FLD_REPORT_MSG_DTL(2, 6, 101, 1);
+            FLD_REPORT_MSGSYNC_DTL(2, 6, 101, 1);
+            var54 = 0;
+            SET_COUNT(130, var54);
+        }
+        else if (var53 == 8)
+        {
+            sVar0 = 1;
+            sVar1 = 0;
+            sVar2 = 2;
+            sVar3 = -1;
+            sVar4 = -1;
+            FLD_REPORT_MSG_DTL(2, 1, 102, 1);
+            FLD_REPORT_MSGSYNC_DTL(2, 1, 102, 1);
+            var54 = 0;
+            SET_COUNT(130, var54);
+        }
+
+        var53 = GET_COUNT(130);
+        
+        if (var53 == 0)
+        {
+            goto _285;
+        }
+
+        goto _284;
+    }
+
+    _285:
+}

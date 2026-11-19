@@ -1,0 +1,62 @@
+import("BOSS.msg");
+
+// Procedure Index: 72
+void D00_03_SCENARIO_BATTLE_01_hook()
+{
+    int_CLEAR();
+    sVar0 = 879;
+    sVar1 = (0x20000000 + 4930);
+    sVar10 = 150;
+    sVar11 = 3;
+    sVar13 = 10;
+    sVar12 = 0;
+    SET_COUNT(144, 11600);
+    // bit id (1073741824) + (56) = 11832
+    
+    if (BIT_CHK(sVar1) == 0)
+    {
+        BIT_ON(sVar1);
+
+        BIT_ON((0x40000000 + 56));
+        RECOVERY_ALL();
+        FLD_RETRY_BOSS_SAVE();
+        // First battle
+        CALL_EVENTBATTLE(480, 35,sVar0);
+
+        // Modify this event
+        CALL_EVENT(480,30);
+
+        PARTY_IN(10);
+
+        if ((BIT_CHK((0x20000000 + 2591)) == 1) && (BIT_CHK((0x20000000 + 2590)) == 0))
+        {
+            SET_PERSONA_LV(10, 229, 53);
+            ADD_PERSONA_SKILL(10, 229, 302);
+            ADD_PERSONA_SKILL(10, 229, 109);
+            ADD_PERSONA_SKILL(10, 229, 206);
+            ADD_PERSONA_SKILL(10, 229, 389);
+            ADD_PERSONA_SKILL(10, 229, 55);
+            ADD_PERSONA_SKILL(10, 229, 58);
+            SET_EQUIP(10, 0, (0 + 250));
+            SET_EQUIP(10, 4, (0x00008000 + 254));
+            SET_EQUIP(10, 1, (0x1000 + 141));
+        }
+
+        RECOVERY_ALL();
+        FLD_RETRY_BOSS_SAVE();
+        // Second battle
+        CALL_EVENTBATTLE(480,40,878);
+    }
+    else 
+    {
+        FLD_RETRY_BOSS_SAVE();
+        CALL_BATTLE(sVar0);
+        WAIT_BATTLE();
+    }
+
+    PARTY_OUT(10);
+    // bit id (1073741824) + (56) = 11832
+    BIT_OFF((0x40000000 + 56));
+    CALL_EVENT(480, 60);
+    CALL_FIELD(sVar10, sVar11, sVar13, sVar12);
+}
